@@ -524,25 +524,473 @@
 //2. Pre Defined
 
 //Math.Sqrt(49);
-Console.WriteLine("hi");
+//Console.WriteLine("hi");
 
 
-double Power(int number, int power){
-    double result = 1;
+//double Power(int number, int power){
+//    double result = 1;
 
-    for (int i =1; i<= power; i++)
-    {
-    
-     result =  number *result ;
-    }
-    return (result);
+//    for (int i =1; i<= power; i++)
+//    {
 
-}
+//     result =  number *result ;
+//    }
+//    return (result);
 
-Console.WriteLine(Power(7,5));
-Console.WriteLine(Math.Pow(7,5));
+//}
+
+//Console.WriteLine(Power(7,5));
+//Console.WriteLine(Math.Pow(7,5));
 
 
 //1.Make 2 jagged arrays.
 
 //2.Create a function to print them.
+
+
+//exception handling(try | catch )
+//try
+//{
+//    //Code to execute
+//    Console.WriteLine("Enter a number from 1 to 4");
+//    int number = Convert.ToInt32(Console.ReadLine());
+//    switch (number)
+//    {
+//        case 1:
+//            Console.WriteLine("Hi");
+//            break;
+//        case 2:
+
+//            Console.WriteLine("Hi , Hi");
+
+//            break;
+//        case 3:
+//            Console.WriteLine("Hi,hello, hi");
+//            break;
+//        case 4:
+//            Console.WriteLine("Hi,hello, hi, hello");
+//            break;
+
+//        default:
+//            Console.WriteLine("bye");
+//            break;
+//    }
+//}
+//catch (DivideByZeroException e)
+//{
+//    //Print a message on exception
+//    Console.WriteLine("Can't Divide by zero");
+
+//}
+//catch (FormatException e)
+//{
+//    //Print a message on exception
+//    Console.WriteLine("Invalid input we want an integer from you." + e);
+//}
+//catch (Exception e)
+//{
+//    //Print a message on exception
+//    Console.WriteLine("Oops, Something went wrong.");
+//}
+//finally
+//{
+//    Console.WriteLine("Thanks for using our console application. Do recommend it to others :)");
+//}
+
+
+
+//Collections
+
+//Generics collection
+//fixed Datatype
+//dynamic size
+//List, Dictionary, Stack, Queues
+
+//Non-Generics collection
+// Datatype not fixed
+//dynamic size
+//ArrayList, Hashtable
+
+//using System.Collections;
+//using System.Linq;
+
+//Generics
+//List
+
+//List<string> SuperCars = new List<string>();
+
+//SuperCars.Add("Ferrari");
+//SuperCars.Add("Lamborghini");
+//SuperCars.Add("Buggati Chiron");
+
+//Console.WriteLine(SuperCars);
+
+//foreach (string car in SuperCars)
+//{
+//    Console.WriteLine(car);
+//}
+
+//List<string> Cars = new List<string>();
+
+//Cars.Add("Honda civic");
+//Cars.Add("Honda Accord");
+//Cars.Add("Toyota Camry");
+//Cars.Add("toyota Fortuner");
+//Cars.Add("Suzuki Cultus");
+//Cars.Add("Toyota vitz");
+
+
+//foreach (string car in Cars)
+//{
+//    Console.WriteLine(car);
+//}
+
+//Cars.Remove("Toyota vitz");
+//Console.WriteLine("after removing vitz::");
+//foreach (string car in Cars)
+//{
+//    Console.WriteLine(car);
+//}
+
+//Cars.RemoveAt(0);
+//foreach (string car in Cars)
+//{
+//    Console.WriteLine(car);
+//}
+
+
+
+//Console.WriteLine(Cars.Contains("Toyota vitz"));
+
+
+//Cars.Insert(1, "Toyota Revo");
+
+
+
+
+//Console.WriteLine(Cars.Contains("Toyota Revo"));
+
+//Cars.AddRange(SuperCars);
+
+
+
+
+
+
+//Cars.RemoveRange(0,2);
+
+//foreach (string car in Cars)
+//{
+//    Console.WriteLine(car);
+//}
+//Cars.Clear();
+
+//Console.WriteLine(Cars.Contains("Toyota Revo"));
+
+
+//Console.WriteLine(Cars[4]);
+
+
+
+// Create two list of students and their marks make sure to insert equal records in
+// both lists.
+
+// Write a function to find a student whether it is in list or not.
+//findStudent("haris");
+// apply remove and insert methods too.
+
+
+
+
+
+//foreach (string car in Cars)
+//{
+//    Console.WriteLine(car);
+//}
+
+
+//Queues  (fifo: first in first out)
+
+//Queue<string> names = new Queue<string>();
+
+//names.Enqueue("Haris");
+//names.Enqueue("ahmed");
+//names.Enqueue("ashar");
+//names.Enqueue("rayan");
+//names.Enqueue("yaheya");
+//names.Enqueue("abdullah");
+//names.Enqueue("talha");
+//names.Enqueue("danish");
+//names.Enqueue("sohaib");
+
+
+//names.Dequeue();
+//names.Dequeue();
+//names.Dequeue();
+//names.Dequeue();
+
+////names.Clear();
+
+//foreach (string item in names)
+//{
+//    Console.WriteLine(item);
+//}
+
+
+
+//Stack (lifo: last in first out)
+
+//Stack<string> SecondRow = new Stack<string>();
+
+
+//SecondRow.Push("Aisha");
+//SecondRow.Push("ashbal");
+//SecondRow.Push("mariam");
+//SecondRow.Push("muzammil");
+//SecondRow.Push("basit");
+
+
+
+
+//SecondRow.Pop();
+////SecondRow.Pop();
+////SecondRow.Pop();
+////SecondRow.Pop();
+
+////SecondRow.Clear();
+
+//foreach (string item in names)
+//{
+//    Console.WriteLine(item);
+//}
+//foreach (string item in SecondRow)
+//{
+//    Console.WriteLine(item);
+//}
+
+
+
+//using System.Collections;
+//Dictionaries (Generics)
+//Dictionary<string, string> user = new Dictionary<string, string>();
+
+
+//user.Add("joyful", "fill with happiness/ feeling happy");
+
+//user.Add("username", "harisnaseer24");
+//user.Add("email", "harisnaseer24@gmail.com");
+//user.Add("pass", "abcdefghij");
+//user.Add("role", "admin");
+//user.Add("image", "harisnaseer.jpg");
+
+//Console.WriteLine(user["joyful"]);
+//user.Remove("image");
+////Console.WriteLine(user["role"]);
+
+//foreach (var item in user)
+//{
+
+//    string[] test = (item.ToString()).Split(",");// ["[username" ," harisnaseer24]"]
+
+//    string key = test[0].Trim('[');
+
+//    string value = test[1].Trim(']');
+//    //Console.WriteLine(key);
+//    //Console.WriteLine(value);
+//    Console.WriteLine($"The property is : {key} and  value is : {value}");//interpolation
+
+//}
+
+
+
+
+
+
+
+//Hashtables (Non generic)(no fixed datatype)
+
+
+
+//Hashtable user = new Hashtable();
+
+//dfjkd = 6234@#$!,jhsfkdhfkshfsjdhf  -- algorithm (Hashing Algorithm  blowfish,md5, hS256, r256)
+
+
+
+//user.Add("username", "harisnaseer24");
+//user.Add("email", "harisnaseer24@gmail.com");
+//user.Add("pass", 54544454544);
+//user.Add("isadmin", true);
+//user.Add(2.45, "harisnaseer.jpg");
+
+//Console.WriteLine(user[2.4]);
+//user.Remove(2.45);
+
+
+//user.Contains(2.45);//true
+
+//user.ContainsValue("harisnaseer24");//true
+
+////Console.WriteLine(user["role"]);
+///
+
+//foreach (DictionaryEntry item in user)
+//{
+//    Console.WriteLine(item.Key + " : " + item.Value);
+//}
+
+
+
+//Console.WriteLine(user.GetHashCode());
+
+
+
+
+//ArrayList (Non Generic)(no fixed datatype)
+
+//ArrayList Cars = new ArrayList();
+
+//Cars.Add("Honda civic");
+//Cars.Add("Honda Accord");
+//Cars.Add("Toyota Camry");
+//Cars.Add("toyota Fortuner");
+//Cars.Add(240900);
+//Cars.Add(0.24f);
+//Cars.Add(true );
+
+//Cars.Remove("Toyota vitz");
+//Cars.RemoveAt(3);
+
+//Console.WriteLine(Cars.Contains("Toyota Revo"));
+//Cars.Insert(1, "Toyota Revo");
+//Console.WriteLine(Cars.Contains("Toyota Revo"));
+//Cars.RemoveRange(0, 2);
+//Cars.Clear();
+//Console.WriteLine(Cars.Contains("Toyota Revo"));
+
+////Console.WriteLine(Cars[4]);
+//foreach (var car in Cars)
+//{
+//    Console.WriteLine(car);
+//}
+
+
+//String Methods
+
+//using System.Collections;
+//string test = """{ "name": "John Doe"}""";
+
+
+//string test = "we are  Learning \"C#\"";
+//string test2 = $"we are {{ asdsad}} ";
+
+
+//Console.WriteLine(test2);
+//test = test.Replace("Learning", "Mastering");
+//Console.WriteLine(test.Replace("Learning", "Mastering"));
+//Console.WriteLine(test);
+//Console.WriteLine(test.Replace("C#", "Java"));
+
+//string email = "hdkjhdkjhkhf";
+//int age = 75;
+
+//login start
+//jmhjhj
+//login end
+
+
+//CODING Best Practices
+
+//Indentation(Readable by using spaces and new lines) 
+// Comments //Sir yahan switch case shuru kia ha
+// Meaningful identifiers (variable names)
+// errors (exception handling) 
+//less repeatation
+
+
+//int a=1; 
+//a=a + 1;
+//if (a == 1) 
+//{ 
+//    a = 2; 
+//} else if () 
+//{ 
+
+//} else {
+
+//}
+
+//Objects and Classes
+
+//int age = 0;
+
+Aeroplane Boeing707 = new Aeroplane();//default constructor
+Boeing707.takeOff();
+Boeing707.Name = "Boeing707";
+Boeing707.land();
+
+////Boeing707.Name = "Boeing 707";
+////Boeing707.takeOff();
+////Console.WriteLine(Boeing707.AirLine);
+
+//Aeroplane f16 = new Aeroplane("PAF");
+
+
+//Aeroplane f17 = new Aeroplane("PAF","F-17 Thunder",2,2,"8500hp");
+//f17.takeOff();
+//f17.land();
+
+
+
+public class Aeroplane
+{
+    public string? AirLine;// nullable
+    public string? Name;
+    public int Seats;
+    public int Crew;
+    public string? Power;
+
+
+    //Constructor
+    // class name
+    //public
+
+    public Aeroplane()
+    {
+        this.AirLine = "Not specified";
+        this.Name = "unknown";
+        this.Seats = 0;
+        this.Crew = 0;
+        this.Power = null;
+    }
+
+    //public Aeroplane(string AirLine)
+    //{
+    //    this.AirLine = AirLine;
+    //    this.Name = "unknown";
+    //    this.Seats = 0;
+    //    this.Crew = 0;
+    //    this.Power = null;
+    //}
+
+
+    ////Paremeterized constructor (Overloading)
+    //public Aeroplane(string ALine, string name, int seat, int crew, string pow)
+    //{
+    //    this.AirLine = ALine;
+    //    this.Name = name;
+    //    this.Seats = seat;
+    //    this.Crew = crew;
+    //    this.Power = pow;
+    //}
+    public void takeOff()
+    {
+        Console.WriteLine($"{this.Name} is taking off. Best Wishes..!");
+    }
+    public void land()
+    {
+        Console.WriteLine($"{this.Name} is Landing at the 4th runway..! ");
+    }
+
+
+}
