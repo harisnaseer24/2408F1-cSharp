@@ -924,73 +924,201 @@
 
 //int age = 0;
 
-Aeroplane Boeing707 = new Aeroplane();//default constructor
-Boeing707.takeOff();
-Boeing707.Name = "Boeing707";
-Boeing707.land();
+//Aeroplane Boeing707 = new Aeroplane();//default constructor
+//Boeing707.takeOff();
+//Boeing707.Name = "Boeing707";
+//Boeing707.land();
 
 ////Boeing707.Name = "Boeing 707";
 ////Boeing707.takeOff();
 ////Console.WriteLine(Boeing707.AirLine);
 
 //Aeroplane f16 = new Aeroplane("PAF");
+//Console.WriteLine(f16.AirLine);
 
 
-//Aeroplane f17 = new Aeroplane("PAF","F-17 Thunder",2,2,"8500hp");
+//Aeroplane f17 = new Aeroplane("PAF","F17-Thunder",2,2,"10000hp");
 //f17.takeOff();
 //f17.land();
 
 
 
-public class Aeroplane
+//public class Aeroplane
+//{
+//    public string? AirLine;// nullable
+//    public string? Name;
+//    public int Seats;
+//    public int Crew;
+//    public string? Power;
+
+
+//    //Constructor
+//    // class name
+//    // public
+//    // no return type
+
+//    //Default constructor
+//    public Aeroplane()
+//    {
+//        this.AirLine = "Not specified";
+//        this.Name = "unknown";
+//        this.Seats = 0;
+//        this.Crew = 0;
+//        this.Power = null;
+//    }
+
+//    //parameterized constructor
+//    public Aeroplane(string AirLine)
+//    {
+//        this.AirLine = AirLine;
+//        this.Name = "unknown";
+//        this.Seats = 0;
+//        this.Crew = 0;
+//        this.Power = null;
+//    }
+
+//    ////Paremeterized constructor (Overloading)
+//    public Aeroplane(string ALine, string name, int seat, int crew, string pow)
+//    {
+//        this.AirLine = ALine;
+//        this.Name = name;
+//        this.Seats = seat;
+//        this.Crew = crew;
+//        this.Power = pow;
+//    }
+//    public void takeOff()
+//    {
+//        Console.WriteLine($"{this.Name} is taking off. Best Wishes..!");
+//    }
+//    public void land()
+//    {
+//        Console.WriteLine($"{this.Name} is Landing at the 4th runway..! ");
+//    }
+
+
+//}
+
+
+
+//OOPs (Object Oriented Programming)
+// REUSABILITY (AIK CODE BAR BAR ISTEMAL KRNA)
+// WELL STRUCTURED CODE
+// BEST FOR LARGE SYSTEMS
+// EASY MAINTENANCE
+// EASY TO UNDERSTAND
+// EASY TO SCALE
+
+
+//Pillars of OOP
+//1. INHERITANCE
+//2. ABSTRACTION
+//3. ENCAPSULATION
+//4. POLYMORPHISM
+
+
+//it is an approach to code cleaner and better.
+//readable
+//reusable
+//optimize
+//proper structure of the code is maintained.
+
+
+
+//Main Pillars of OOP
+
+//1. Interitance
+//i.Single level inheritance  Vehicle -> Car
+// ii . Multi level inheritance  Vehicle -> Car -> Ecar
+// iii. Heirarchical inheritance Vehicle ->Car , Vehicle-> Bike
+// iv. Multiple inheritance (Interface) 
+// v. Hybrid inheritance    Vehicle -> CAR , Vehicle -> Car -> Ecar, Car-> Ecar
+
+//2. Polymorphism
+// Method Overloading
+// Method Overriding
+//3. Abstraction
+//4. Encapsulation
+
+
+
+////Inheritance
+//Vehicle abc = new Vehicle("AAZ-789", "Metallic grey");
+//abc.Run();
+
+//Vehicle myVehicle = new Vehicle("KKD-4351","Metallic Grey");
+//myVehicle.Run();
+//Car mercedez = new Car("TZ-8908", "Black", "Mercedez", "Benz C-Class", 20000000);
+//mercedez.Run();
+//mercedez.Run(300);
+
+
+Car supra = new Car("A-0001","Red","Toyota","Supra 2019",8000000);
+Console.WriteLine(supra.model);
+supra.Run();
+supra.Drfit();
+
+
+//// Parent class | Base Class | Super Class
+public class Vehicle
 {
-    public string? AirLine;// nullable
-    public string? Name;
-    public int Seats;
-    public int Crew;
-    public string? Power;
+    public string regNo;
+    public string color;
 
+    //constructor
 
-    //Constructor
-    // class name
-    //public
-
-    public Aeroplane()
+    public Vehicle(string regno, string color)
     {
-        this.AirLine = "Not specified";
-        this.Name = "unknown";
-        this.Seats = 0;
-        this.Crew = 0;
-        this.Power = null;
+        this.regNo = regno;
+        this.color = color;
+    }
+    public void Run()
+    {
+        Console.WriteLine($"{this.regNo} vehicle started running");
+    }
+}
+
+
+
+//// Child class | Derived Class | Sub Class
+public class Car : Vehicle
+{
+
+    public string brand;
+    public string model;
+    public int price;
+
+    public Car(string regno, string color, string brand, string model, int price) : base(regno, color)
+    {
+        this.brand = brand;
+        this.model = model;
+        this.price = price;
     }
 
-    //public Aeroplane(string AirLine)
+
+    public void Drfit()
+    {
+        Console.WriteLine($"{this.brand} {this.model} is drifting.");
+    }
+
+    ////method overriding
+    public void Run()
+    {
+        Console.WriteLine($"{this.brand} {this.model}  started running...!!!!");
+    }
+
+
+    ////method overloading
+    //public void Run(int speed)
     //{
-    //    this.AirLine = AirLine;
-    //    this.Name = "unknown";
-    //    this.Seats = 0;
-    //    this.Crew = 0;
-    //    this.Power = null;
+    //    Console.WriteLine($"{this.brand} {this.model} {this.regNo} started running at {speed} MPH.");
     //}
-
-
-    ////Paremeterized constructor (Overloading)
-    //public Aeroplane(string ALine, string name, int seat, int crew, string pow)
-    //{
-    //    this.AirLine = ALine;
-    //    this.Name = name;
-    //    this.Seats = seat;
-    //    this.Crew = crew;
-    //    this.Power = pow;
-    //}
-    public void takeOff()
-    {
-        Console.WriteLine($"{this.Name} is taking off. Best Wishes..!");
-    }
-    public void land()
-    {
-        Console.WriteLine($"{this.Name} is Landing at the 4th runway..! ");
-    }
-
 
 }
+
+
+
+//# Create a User class with some properties like (username, email, age) and methods like login,logout, show_details
+//# Create an Admin class inheriting User class having additional property role ="admin", phone.
+//# admin have access to additional methods like showProduct, addProducts, editProducts .
+//# Override the method login in which message should be "Admin is logged in"
+//# create objects for user and admin also call all the methods.
