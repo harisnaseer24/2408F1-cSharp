@@ -1033,10 +1033,12 @@
 // iv. Multiple inheritance (Interface) 
 // v. Hybrid inheritance    Vehicle -> CAR , Vehicle -> Car -> Ecar, Car-> Ecar
 
-//2. Polymorphism
+//2. Polymorphism (many forms)
+
 // Method Overloading
-// Method Overriding
-//3. Abstraction
+// Method Overriding  (Inheritance)
+
+//3. Abstraction  -- DATA HIDING (Abstract CLasses/ Interfaces)
 //4. Encapsulation
 
 
@@ -1052,68 +1054,77 @@
 //mercedez.Run(300);
 
 
-Car supra = new Car("A-0001","Red","Toyota","Supra 2019",8000000);
-Console.WriteLine(supra.model);
-supra.Run();
-supra.Drfit();
+//Car supra = new Car("A-0001","Red","Toyota","Supra 2019",8000000);
+//Console.WriteLine(supra.model);
+//supra.Run();
+//supra.Run(50);
+//supra.Run("100 KM/HR");
+
+//supra.Drfit();
 
 
 //// Parent class | Base Class | Super Class
-public class Vehicle
-{
-    public string regNo;
-    public string color;
+//public class Vehicle
+//{
+//    public string regNo;
+//    public string color;
 
-    //constructor
+//    //constructor
 
-    public Vehicle(string regno, string color)
-    {
-        this.regNo = regno;
-        this.color = color;
-    }
-    public void Run()
-    {
-        Console.WriteLine($"{this.regNo} vehicle started running");
-    }
-}
+//    public Vehicle(string regno, string color)
+//    {
+//        this.regNo = regno;
+//        this.color = color;
+//    }
+//    public void Run()
+//    {
+//        Console.WriteLine($"{this.regNo} vehicle started running");
+//    }
+//}
 
 
 
 //// Child class | Derived Class | Sub Class
-public class Car : Vehicle
-{
+//public class Car : Vehicle
+//{
 
-    public string brand;
-    public string model;
-    public int price;
+//    public string brand;
+//    public string model;
+//    public int price;
 
-    public Car(string regno, string color, string brand, string model, int price) : base(regno, color)
-    {
-        this.brand = brand;
-        this.model = model;
-        this.price = price;
-    }
-
-
-    public void Drfit()
-    {
-        Console.WriteLine($"{this.brand} {this.model} is drifting.");
-    }
-
-    ////method overriding
-    public void Run()
-    {
-        Console.WriteLine($"{this.brand} {this.model}  started running...!!!!");
-    }
+//    public Car(string regno, string color, string brand, string model, int price) : base(regno, color)
+//    {
+//        this.brand = brand;
+//        this.model = model;
+//        this.price = price;
+//    }
 
 
-    ////method overloading
-    //public void Run(int speed)
-    //{
-    //    Console.WriteLine($"{this.brand} {this.model} {this.regNo} started running at {speed} MPH.");
-    //}
+//    public void Drfit()
+//    {
+//        Console.WriteLine($"{this.brand} {this.model} is drifting.");
+//    }
 
-}
+//    ////method overriding
+//    public void Run()
+//    {
+//        Console.WriteLine($"{this.brand} {this.model}  started running...!!!!");
+//    }
+
+
+//    ////method overloading
+//    public void Run(int speed)
+//    {
+//        Console.WriteLine($"{this.brand} {this.model} {this.regNo} started running at {speed} MPH.");
+//    }
+
+
+//    public void Run(string speed)
+//    {
+//        Console.WriteLine($" {this.model} started running at {speed}.");
+//    }
+
+//}
 
 
 
@@ -1122,3 +1133,501 @@ public class Car : Vehicle
 //# admin have access to additional methods like showProduct, addProducts, editProducts .
 //# Override the method login in which message should be "Admin is logged in"
 //# create objects for user and admin also call all the methods.
+
+
+
+
+
+
+//Vehicle abc = new Vehicle("AAZ-789", "Metallic grey");
+//abc.Run();
+
+//Car MarkX = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+//Car a = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+//Car b = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+//Car bv = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+//Car g = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+//Car MadrkX = new Car("2008", "Black", "Toyota", "Mark X", 3500000);
+
+
+//MarkX.Run();
+//MarkX.Run(300);
+
+//Math abc = new Math();
+//abc.Sqrt(49);
+
+//static function examples:
+//Math.Sqrt(49);
+//Console.WriteLine("dkf");
+
+//Console.WriteLine(Car.carCount);
+//Car.beginRace();
+
+
+
+
+
+//Vehicle myVehicle = new Vehicle();
+
+
+//Bike myBike = new Bike("kkd-3433", "red","70");
+//myBike.KickMaro();
+//myBike.Run();
+
+//Bike yourBike = new Bike("kkd-3433", "red","70");
+
+//Bike yorBike = new Bike("kkd-3433", "red", "70");
+
+//Bike yrBike = new Bike("kkd-3433", "red", "70");
+
+//Bike urBike = new Bike("kkd-3433", "red", "70");
+
+
+
+//Console.WriteLine(Vehicle.TotalVehiclesCreated);
+
+
+//abstract public class Vehicle
+//{
+//    public string regNo;
+//    public string color;
+//    public static int TotalVehiclesCreated=0;
+
+//    public Vehicle(string regno, string color)
+//    {
+//        this.regNo = regno;
+//        this.color = color;
+//        TotalVehiclesCreated++;
+//    }
+
+//    public void Run()
+//    {
+//        Console.WriteLine($"{this.regNo} vehicle started running");
+
+//    }
+//}
+
+
+//public class Bike : Vehicle
+//{
+//    public string hp;
+
+//    public Bike(string regno, string color, string hp):base(regno,color)
+//    {
+//        this.hp = hp;
+
+//    }
+
+//    public void KickMaro()
+//    {
+//        Console.WriteLine("Dekha One kick Start Hai...!");
+//    }
+
+
+//}
+
+
+//Interfaces
+//FrontEndDeveloper haris = new FrontEndDeveloper();
+//haris.ComplexDesign("Haris Naseer");
+//haris.SimpleDesign();
+
+//FullStackDeveloper usama = new FullStackDeveloper();
+//usama.SimpleDesign();
+//usama.ComplexAPIs();
+
+//interface topics{
+
+//Interfaces,
+//        Static,
+//       Abstract
+//} 
+//interface FrontEndDevelopment
+//{
+//    public void SimpleDesign();
+//    public void ComplexDesign(string name);
+
+//}
+
+
+
+
+
+
+//interface BackEndDevelopment
+//{
+//    public void SimpleCrud();
+//    public void ComplexAPIs();
+//    public void Authentication();
+
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+//public class FrontendDeveloper : FrontEndDevelopment
+//{
+
+
+
+//    public void SimpleDesign()
+//    {
+//        Console.WriteLine("We will provide you simple and responsive design using HTML, CSS and JS.");
+//    }
+
+//    public void ComplexDesign(string name)
+//    {
+//        Console.WriteLine($"Hi this is {name}, We will provide you animated and responsive design using HTML, CSS, JS, React, Nextjs.");
+//    }
+
+
+
+//    public void ThreeDAnimatedDesigne(string name)
+//    {
+//        Console.WriteLine($"Hi this is {name}, We will provide you animated and responsive design using HTML, CSS, JS, React, Nextjs.");
+//    }
+//}
+
+
+
+
+
+//public class BackEndDeveloper : BackEndDevelopment
+//{
+//    //method implementation
+//    public void SimpleCrud()
+//    {
+//        Console.WriteLine("We will provide you simple and responsive design using HTML, CSS and JS.");
+//    }
+//    public void ComplexAPIs()
+//    {
+//        Console.WriteLine($"Hi this is , We will provide you animated and responsive design using HTML, CSS, JS, React, Nextjs.");
+//    }
+
+//    public void Authentication()
+//    {
+//        Console.WriteLine($"Hi this is , We will provide you animated and responsive design using HTML, CSS, JS, React, Nextjs.");
+//    }
+
+//}
+
+
+
+//Multiple Inheritance
+//public class FullStackDeveloper : FrontEndDevelopment, BackEndDevelopment
+//{
+//    public void SimpleDesign()
+//    {
+//        Console.WriteLine("We will provide you simple and responsive design using HTML, CSS and JS.");
+//    }
+//    public void ComplexDesign(string name)
+//    {
+//        Console.WriteLine($"Hi this is {name}, We will provide you animated and responsive design using HTML, CSS, JS, React, Nextjs.");
+//    }
+//    public void SimpleCrud()
+//    {
+//        Console.WriteLine("We will provide you simple crud operations.");
+//    }
+//    public void ComplexAPIs()
+//    {
+//        Console.WriteLine($"We will provide you complex APIs.");
+//    }
+//    public void Authentication()
+//    {
+//        Console.WriteLine($" We will provide you Authentication.");
+//    }
+//}
+
+
+
+
+
+//Access  Modifiers /Specifier
+
+//1. public     | anyone can access from any where in the program.
+//2. private    | only owner class can access .
+//3. protected  | only owner class and child class can access .
+
+
+
+//Products neckBand = new Products(1500, "Lenovo Neckband", "good quality product with extra base and long range connectivity.");
+//neckBand.name="Lenovo nb";
+//Console.WriteLine(neckBand.name);
+//neckBand.price;
+//neckBand.description;
+//Console.WriteLine(neckBand.price);
+
+//neckBand.showPrice();
+//neckBand.callShowPrice();
+
+//Gadgets iphone = new Gadgets(230000, "iphone 15 pro max", "acha phone ha", "phones");
+//iphone.ShowGadget();
+
+//public class Products
+//{
+//    public string name;
+//    private int price;
+//    protected string description;
+
+//    public Products(int price, string name, string description)
+//    {
+//        this.name = name;
+//        this.price = price;
+//        this.description = description;
+//    }
+
+//    private void showPrice()
+//    {
+//        Console.WriteLine(this.price);
+//    }
+//    public void callShowPrice()
+//    {
+//        this.showPrice();
+//    }
+
+
+//}
+
+//public class Gadgets : Products
+//{
+//    public string category;
+
+//    public Gadgets(int price, string name, string description, string category) : base(price, name, description)
+//    {
+//        this.category = category;
+//    }
+
+//    public void ShowGadget()
+//    {
+//        Console.WriteLine(this.name);
+//        //Console.WriteLine(this.price);
+//        this.callShowPrice();
+//        Console.WriteLine(this.description);
+//        Console.WriteLine(this.category);
+
+//    }
+//}
+
+//unary operator    a++, a--
+//binary operator   a + b; a - b
+//Ternary operator  (condition) ? "hi" : "bye" // 3 operands
+
+//string greet = (10 <=10) ? "hi" : "bye";
+
+//Console.WriteLine(greet);
+
+//getters and setters
+
+//Animal cat = new Animal();
+//cat.Name = "Tom";
+//Console.WriteLine(cat.Age);
+
+//cat.Age = 40;
+//Console.WriteLine(cat.Age);
+
+
+//public class Animal
+//{
+//    public string? Name { get; set; } //auto complete properties
+//    private int age;
+
+
+//    public int Age
+//    {
+//        get { return age; }
+
+//        set
+//        {
+
+//            age = value < 10 ? value : 10;
+//        }
+//    }
+//}
+
+
+
+//enums
+//Implicit typecasting int --> double 8--> 8.0
+//Explicit typecasting double --> int  8.823473472327474-> 8  // data loss 
+
+//int j = 4;
+
+
+//double b = j;
+//Console.WriteLine(j);
+//Console.WriteLine(b);
+
+//double j = 4.946735346563485687434786;
+
+
+//int b =    (int) j; 
+
+
+//Console.WriteLine(j);
+//Console.WriteLine(b);
+
+//Console.WriteLine($"{pakBatters.Fakhar} has jersey no {(int)pakBatters.Fakhar}");
+
+//int num = 46;
+//switch (num)
+//{
+//    case (int)pakBatters.Fakhar:
+//        Console.WriteLine("Fakhar Zaman");
+//        break;
+
+//    case (int)pakBatters.Babar:
+//        Console.WriteLine("Babar Azam");
+//        break;
+//    case (int)pakBatters.Farhan:
+//        Console.WriteLine("Sahibzada Farhan");
+//        break;
+//    case (int)pakBatters.Rizwan:
+//        Console.WriteLine("M. Rizwan");
+//        break;
+//    default:
+//        Console.WriteLine("No one");
+//        break;
+//}
+//enum pakBatters
+//{
+//    Babar = 56,
+//    Rizwan = 33,
+//    Fakhar = 46,
+//    Farhan = 34
+//}
+
+
+//namespaces : a collection of related classes and sub namespaces.
+
+using Indexers;
+using System;
+using System.Collections;
+using TaxManagementSystem;
+
+//using TaxMangementSytem;
+//using Indexers;
+
+
+
+//Car myCar = new Car();
+//Car yourCar = new Car();
+//Car whosCar = new Car();
+
+//Bike myBike = new Bike();
+//Bike yourBike = new Bike();
+
+//Console.WriteLine(Car.TotalCars);
+//Console.WriteLine($"Total Cars: {Car.TotalCars}");
+//Console.WriteLine($"Total Bikes: {Bike.TotalBikes}");
+//Console.WriteLine($"Total Vehicles: {Vehicle.TotalVehicles}");
+
+//Tax tolltax = new Tax();
+
+//tolltax.amount = 5000;
+
+//Vehicle vehicle = new Vehicle();
+//vehicle.regNum = 4545;
+
+
+
+////Indexers : when we want our object to behave like an array we implement indexers.
+
+//fruits basket = new fruits();
+//basket[0] = "Langra";
+//basket[1] = "Chaunsa";
+//basket[2] = "Daseri";
+//basket[3] = "Sindhri";
+//basket[4] = "Anwer Ritol";
+
+//Console.WriteLine(basket[3]);
+
+//foreach (string item in basket.fruitNames)
+//{
+//    Console.WriteLine(item);
+//}
+
+//Records 
+
+//User ahmed = new User();
+//ahmed.id = 1;
+//ahmed.name = "Ahmed Hassan";
+
+
+//User haris = new User();
+//haris.id = 1;
+//haris.name = "Ahmed Hassan";
+
+//Console.WriteLine(ahmed);// User
+//Console.WriteLine(ahmed == haris);// False
+
+//User1 talha = new User1();
+//talha.id = 2;
+//talha.name = "Mirza talha";
+
+//User1 abdullah = new User1();
+//abdullah.id = 2;
+//abdullah.name = "Mirza";
+
+//Console.WriteLine(talha);
+//Console.WriteLine(talha == abdullah);
+
+//public class User
+//{
+//    public int id { get; set; }
+//    public string? name { get; set; }
+//}
+//public record User1
+//{
+//    public int id { get; set; }
+//    public string name { get; set; }
+//}
+
+
+
+
+// Function/ Lambda expression
+
+Console.WriteLine("=== LAMBDA EXPRESSION ===");
+
+// Lambda expression assigned to a built-in delegate
+Func<int, int, int> multiply = (a, b) => a * b;
+
+int lambdaResult = multiply(5, 6);
+Console.WriteLine($"Lambda Result: {lambdaResult}");
+
+Console.WriteLine();
+
+
+//Console.WriteLine("=== LINQ LAMBDA QUERY ===");
+
+int[] numbers = { 1, 2, 3, 4, 5, 6 };
+
+// Filter even numbers and multiply by 10
+var oddNumbers = numbers
+    .Where(n => n % 2 != 0)
+    .Select(n => n * 10);
+
+foreach (var n in oddNumbers)
+{
+    Console.WriteLine(n);
+}
+
+Console.WriteLine();
+
+
+
+
+
+
+
+
+
+// Event/Delegates
