@@ -21,6 +21,7 @@
 
 
 bool isTrue= true;
+bool isTrue2= true;
 
 //Console.WriteLine("What's your First Name..?");
 
